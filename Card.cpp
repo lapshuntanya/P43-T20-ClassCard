@@ -46,29 +46,41 @@ void Card::showInfo() {
 }
 
 void Card::setName(const char *client_name) {
-
+    if(strlen(client_name) < 3)
+        cout << "Error: short name!" << endl;
+    else{
+        delete[] name; // Видаляємо старе імʼя
+        int size_name = strlen(client_name) + 1; //Рахуємо новий розмір рядку
+        name = new char[size_name]; //Виділяємо памʼять під новий розмір
+        //strcpy_s(name, size_name, client_name); //Копіюємо нове імʼя
+        strcpy(name, client_name); //Копіюємо нове імʼя
+    }
 }
 
 void Card::setPIN(int old_pin, int new_pin) {
-
+    if(old_pin != pin && new_pin >= 1000 && new_pin <= 9999)
+        cout << "Error: invalid pin!" << endl;
+    else{
+        pin = new_pin;
+    }
 }
 
 unsigned long Card::getNumber() {
-    return 0;
+    return number;
 }
 
 const char *Card::getName() {
-    return nullptr;
+    return name;
 }
 
 const char *Card::getExpiredDate() {
-    return nullptr;
+    return expiredDate;
 }
 
 int Card::getPIN() {
-    return 0;
+    return pin;
 }
 
 float Card::getCash() {
-    return 0;
+    return cash;
 }
