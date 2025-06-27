@@ -10,7 +10,7 @@ using namespace std;
 
 class Card {
 private:
-    int number;
+    unsigned long number;
     char* name;
     char expiredDate[6];
     int pin;
