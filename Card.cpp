@@ -44,3 +44,31 @@ void Card::showInfo() {
     cout << "PIN: " << pin << endl;
     cout << "====================================\n\n";
 }
+
+void Card::setName(const char *client_name) {
+
+}
+
+void Card::setPIN(int old_pin, int new_pin) {
+
+}
+
+unsigned long Card::getNumber() {
+    return 0;
+}
+
+const char *Card::getName() {
+    return nullptr;
+}
+
+const char *Card::getExpiredDate() {
+    return nullptr;
+}
+
+int Card::getPIN() {
+    return 0;
+}
+
+float Card::getCash() {
+    return 0;
+}

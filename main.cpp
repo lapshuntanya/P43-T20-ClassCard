@@ -6,6 +6,8 @@ int main() {
     //VIP card
     Card b("Tetiana Lapshun", "01.99", 5'000);
 
+    a.showInfo();
+    b.showInfo();
 
 
     return 0;

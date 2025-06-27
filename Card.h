@@ -22,6 +22,16 @@ public:
     ~Card(); //Деструктор
 
     void showInfo();
+
+    void setName(const char* client_name);
+    void setPIN(int old_pin, int new_pin);
+
+    unsigned long getNumber();
+    const char* getName();
+    const char* getExpiredDate();
+    int getPIN();
+    float getCash();
+
 };
 
 
